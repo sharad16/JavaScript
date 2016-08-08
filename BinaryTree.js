@@ -5,7 +5,6 @@
  * 2. Inspect to bring up an Object Inspector on the result (Ctrl+I), or,
  * 3. Display to insert the result in a comment after the selection. (Ctrl+L)
  */
-
 function BinaryTree() {
   this.root = null;
 }
@@ -15,13 +14,13 @@ function Node(data) {
   this.right = null;
 }
 BinaryTree.prototype = {
-insert : function(data){
+  insert : function(data){
 	//var root = this.root;
-	var node = new Node(data);
+	 var node = new Node(data);
     //console.log(data);
-	if(this.root === null){
+	 if(this.root === null){
 		this.root = node;
-    console.log(this.root.data+"*****----");
+    console.log(this.root.data+" *****----");
 	}
 	else{
 		current = this.root;
@@ -58,13 +57,7 @@ insert : function(data){
      this.inorderTraversal(node.right);
   }
 },
-	postOrderTraversal : function(node){
-	if(node){
-		this.postOrderTraversal(node.left);
-		this.postOrderTraversal(node.right);
-		console.log(node.data);
-	}
-},
+	
 	preOrderTraversal : function(node){
 	if(node){
 		console.log(node.data);
@@ -72,22 +65,29 @@ insert : function(data){
 		this.preOrderTraversal(node.right);
 	}
 },
-	searchValueinTree : function (node,key){
+	postOrderTraversal : function(node){
+	if(node){
+		this.postOrderTraversal(node.left);
+		this.postOrderTraversal(node.right);
+		console.log(node.data);
+	}
+},
+  searchValueinTree : function (node,key){
 	if(node === null){
 		return false;
 	}
 	else if(node.data === key){
 		return true;
 	}
-	else if(node.data < key){
+	else if(key > node.data){
 		return this.searchValueinTree(node.right,key);
 	}
-	else if(node.data > key){
+	else if(key < node.data){
 		return this.searchValueinTree(node.left,key);
 	}
 },
 	//minimum value in the node is last node in the left side
-minValueInTree : function (node){
+  minValueInTree : function (node){
 	if(node === null){
 		return 0;
 	}
@@ -117,26 +117,26 @@ minValueInTree : function (node){
 		}
 		else if(node.right == null){
 			var temp = node;
-			node = node.right;
+			node = node.left;
 			temp = null;
 		}
 		else{
-			var temp = minValueInTree(node.right);
+			var temp = this.minValueInTree(node.right);
 			node.data = temp;
-			node.right = deleteValueInTree(node.right,temp);
+			node.right = this.deleteValueInTree(node.right,temp);
 		}
 	}
 	return node;
 	},
-	 maxValueInTree : function(node){
-	if(node === null){
-		return 0;
-	}
-	else if(node.right){
+	maxValueInTree : function(node){
+	 if(node === null){
+	  return 0;
+	 }
+	 else if(node.right){
 		return this.maxValueInTree(node.right);
-	}
+	 }
 	return node.data;
-}
+  }
 }
 var bt = new BinaryTree();
 bt.insert(40);
@@ -146,6 +146,10 @@ bt.insert(30);
 bt.insert(60);
 bt.insert(50);
 bt.insert(70);
+bt.insert(45);
+bt.insert(15);
+bt.insert(18);
+bt.insert(12);
 //inorderTraversal(bt.root);
 console.log(bt.root);
 console.log("inOrder Traversal");
@@ -165,7 +169,7 @@ console.log(max);
 console.log("searching in the tree");
 var found = bt.searchValueinTree(bt.root,100);
 console.log(found);
-var node1 = bt.deleteValueInTree(bt.root,50);
+var node1 = bt.deleteValueInTree(bt.root,10);
 console.log("inOrder Traversal");
 bt.inorderTraversal(node1);
 console.log("post order traversal");
