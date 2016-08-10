@@ -5,13 +5,11 @@ function getTime(){
   var min = d.getMinutes();
   var sec = d.getSeconds();
   //nsole.log(d);
-  document.getElementById('demo').innerHTML = hour+":"+min+":"+sec;
+  document.getElementById('demo').innerHTML = "Time"+hour+":"+min+":"+sec;
   setTimeout(getTime,1000);
 }
 getTime();
-
-/*
-var data = [
+data = [
 {"author" : "chiru",
 "date":"04-08-2016",
 "article":"heavy rains in mumbai",
@@ -26,20 +24,27 @@ var data = [
 "author":"mahesh",
 "date":"04-08-2016",
 "article":"Government has changed goods and tax system",
-"publication":"MumbaiExpress",
+"publication":"MumbaiExpress"
 }
-];
+]
 
-*/
-//var text = json.parse("article.json");
-//document.write(text[0].article);
-var json = new JSON();
-var text =
-	function displayArticle(i){	
-			document.getElementById('article').innerHTML = array[i].article;
-			if(i < data.length){
-				setTimeout('displayArticle('+(i+1)+')',3000);			
+
+var random = (Math.floor(Math.random() * 3) + 0);
+function displayArticle(i){
+
+
+			//document.write(random);
+			document.getElementById('article').innerHTML = "News:"+data[i].article;
+			document.getElementById('author').innerHTML = "Author:"+data[i].author;
+			document.getElementById('date').innerHTML = "Date:"+data[i].date;
+			document.getElementById('publication').innerHTML = "Publication:"+data[i].publication;
+			if(i <= data.length){
+				//setTimeout('displayArticle('+(i+1)+')',3000);
+				random = (Math.floor(Math.random() * data.length) + 0);
+				//document.write(typeof random);
+				//setTimeout('displayArticle('+(i+1)+')',3000);
+				setTimeout('displayArticle('+(random)+')',2000);
+				//setTimeout(displayArticle),2000);
 			}
 	}
-	displayArticle(0);
-			
+	displayArticle(random);
