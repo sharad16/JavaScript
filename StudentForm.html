@@ -1,24 +1,7 @@
-<body>
-<center><h2 style="margin-top:150px;">StudentRegistrationForm</h2></center>
-<form style="margin-top:-50px;">
-<center>
-<table>
-<tr><td>StudentName:</td><td><input type = "text" id = "sname"></td></tr><br>
-<tr><td>RollNo:</td><td><input type = "text" id = "sno"></td></tr><br>
-<tr><td>Age:</td><td><input type = "text" id = "sage"></td></tr><br>
-</table>
-<input type = "submit" value = "submit" onclick = "printform()">
-</center>
-</form>
-<script>
-function printform(){
-  var sname = document.getElementById('sname').value;
-  var sroll = document.getElementById('sno').value;
-  var sage = document.getElementById('sage').value;
-	document.write("<center><h2>StudentData</h2></center>");
-  document.write("<center>StudentName:"+sname+"</center><br>");
-  document.write("<center>StudentRoll:"+sroll+"</center><br>");
-  document.write("<center>StudentAge:"+sage+"</center><br>");
-}
-</script>
-</body>
+
+<form action="Display.html" method="get">
+  StudentName: <input type="text" name="sname"><br>
+  StudentRoll: <input type="text" name="sroll"><br>
+	StudentAge:<input type = "text" name="sage"><br> 
+	<input type="submit" value="Submit">
+</form> 
