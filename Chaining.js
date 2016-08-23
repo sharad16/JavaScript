@@ -1,3 +1,4 @@
+/**calculate function for  Calculator*/
 var calculate = function(){
   var i,j;
   var first = function(a){
