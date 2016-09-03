@@ -1,4 +1,10 @@
 /**
+* FileName:AddRowandColumn.js
+* CreatedBy: Vamsee
+* Date :27-08-2016
+* Purpose : Adding Rows and Columns to the table dynamically
+*/
+/**
 *AddColumn function to add to table.
 */
 function addColumn(tblId) {
@@ -19,6 +25,8 @@ function addColumn(tblId) {
 }
 /**
 *Add row method to add rows dynamically
+*
+*
 */
 function addRow() {
     //taking table id
