@@ -1,18 +1,27 @@
-//created an array which will take shopping list
+/**
+* FileName:Shopping.js
+* CreatedBy: Vamsee
+* Date :27-08-2016
+* Purpose : Creating Shopping List Variable and storing it in two dimensional array
+*/
+
+/*Creating myList array*/
 var myList = [];
-//taking no of elements into the array
+
+/*Asking the user to insert the no of elements he wants to enter*/
 var noOfEle = parseInt(prompt("Enter the No Of Elements u want"));
-//taking list values*/
+
+/*Repeating the for loop for no of times and taking list from user*/
 for (var i = 0; i < noOfEle; i++) {
     for (var j = 0; j < noOfEle; j++) {
-        //list of values
         var list = [];
         list[0] = prompt("Enter the Name of the item");
         list[1] = parseInt(prompt("Enter the No Of Items"));
-        //inserting into mylist
         myList.push(list);
     }
 }
+
+/*Displaying the List of elements*/
 document.write("Items in the List" + "<br>");
 for (var i = 0; i < myList.length; i++) {
     for (var j = 0; j < 2; j++) {
@@ -21,10 +30,14 @@ for (var i = 0; i < myList.length; i++) {
     document.write("<br>");
 }
 
-//Usage of pop function it will remove last element
+/*Returning last element from the list*/
 document.write(myList.pop()+"<br");
-//Usage of shift function it will remove first element
+
+/*Returning first element in the list*/
 document.write(myList.shift()+"<br>");
-//Usage of unshift function  will add elements to the list and returns the noof elements
+
+/*Adding element to the front of array*/
 document.write(myList.unshift(["Jp", 20]));
+
+/*Displaying the list on the html*/
 document.write(myList);

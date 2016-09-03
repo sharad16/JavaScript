@@ -1,6 +1,14 @@
+/**
+* FileName:checkEquality.js
+* CreatedBy: Vamsee
+* Date :27-08-2016
+* Purpose : Function to prepix "BridgeLabz" before anything we log
+*/
+/*Creating Object Literal Which contains a string*/
 var obj = {
     str: "Bridgelabz"
 }
+/*Creating array with some value*/
 var arr = ["Vamsi"];
 var args = [];
 var count = prompt("Enter No of Arguments");
@@ -13,5 +21,5 @@ var func = function() {
         console.log(this.str + args[i]);
     }
 };
-//calling the function by using apply method
+/*calling the function by using apply method*/
 func.apply(obj, args);

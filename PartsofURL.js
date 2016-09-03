@@ -1,4 +1,9 @@
-//Url object
+/**
+* FileName:PartsofURL.js
+* CreatedBy: Vamsee
+* Date :27-08-2016
+* Purpose : Printing the parts of a url
+*/
 var url = new URL("https://developer.mozilla.org");
 /**
 * function To print parts of a url
@@ -10,5 +15,5 @@ function printPartsOfURL(url) {
     console.log("PathName: " + url.pathname);
     console.log("Port: " + url.port);
 }
-//calling the function
+/*calling the function*/
 printPartsOfURL(url);

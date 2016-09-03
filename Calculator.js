@@ -1,11 +1,16 @@
-//function to calculate the result based on operator/selected option
+/**
+* FileName:Calculator.js
+* CreatedBy: Vamsee
+* Date :27-08-2016
+* Purpose : Calculator program
+*/
 function returnResult(){
 //reading value and converting to integer
 	var val1 = parseInt(document.getElementById('i1').value);
 	var val2 = parseInt(document.getElementById('i2').value);
-	//taking select element from html file	
+	//taking select element from html file
 	var e = document.getElementById("sel");
-	//selected index value	
+	//selected index value
 	var value = e.options[e.selectedIndex].value;
 	//selected index text
 	var text = e.options[e.selectedIndex].text;
@@ -15,7 +20,7 @@ function returnResult(){
 		if(value == "add"){
 			result = val1 + val2;
 		}
-		//if selected option is substraction   
+		//if selected option is substraction
 		else if(value == "sub"){
 			result = val1 - val2;
 		}
@@ -30,4 +35,3 @@ function returnResult(){
 		//setting the result in the Result input
 		document.getElementById('result').value = result;
 }
-

@@ -4,8 +4,11 @@
 * Date :27-08-2016
 * Purpose : Adding Rows and Columns to the table dynamically
 */
+
 /**
 *AddColumn function to add to table.
+*@param {Object} tblId - Which takes the table id from html document
+*@return {Boolean} trueorfalse - Based On Checking
 */
 function addColumn(tblId) {
     var tblHeadObj = document.getElementById(tblId).tHead;
@@ -25,8 +28,6 @@ function addColumn(tblId) {
 }
 /**
 *Add row method to add rows dynamically
-*
-*
 */
 function addRow() {
     //taking table id

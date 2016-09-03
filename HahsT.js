@@ -1,35 +1,20 @@
-/**
-* FileName:BinaryTree.js
-* CreatedBy: Vamsee
-* Date :27-08-2016
-* Purpose : Creating BinaryTree using JS prototype
-*/
-
-/**
-* Represents the BinaryTree
-* @constructor
-*/
+/*
+ * This is a JavaScript Scratchpad.
+ * Enter some JavaScript, then Right Click or choose from the Execute Menu:
+ * 1. Run to evaluate the selected text (Ctrl+R),
+ * 2. Inspect to bring up an Object Inspector on the result (Ctrl+I), or,
+ * 3. Display to insert the result in a comment after the selection. (Ctrl+L)
+ */
 function BinaryTree() {
     this.root = null;
 }
-/**
-* Represents the Node Object
-* @constructor
-*/
+
 function Node(data) {
     this.data = data;
     this.left = null;
     this.right = null;
 }
-
-/**
-* Adding methods to BinaryTree prototype
-*/
 BinaryTree.prototype = {
-    /**
-     * insert function
-     * @param {Number} data -Data into the method
-     */
     insert: function(data) {
         //var root = this.root;
         var node = new Node(data);
@@ -62,11 +47,6 @@ BinaryTree.prototype = {
             }
         }
     },
-
-    /**
-     * inorderTraversal function to traverse through the tree
-     * @param {Node} Represents a Node
-     */
     inorderTraversal: function(node) {
         if (node) {
             this.inorderTraversal(node.left);
@@ -74,10 +54,7 @@ BinaryTree.prototype = {
             this.inorderTraversal(node.right);
         }
     },
-    /**
-     * preOrderTraversal function to traverse through the tree
-     * @param {Node} Represents a Node
-     */
+
     preOrderTraversal: function(node) {
         if (node) {
             console.log(node.data);
@@ -85,10 +62,6 @@ BinaryTree.prototype = {
             this.preOrderTraversal(node.right);
         }
     },
-    /**
-     * postOrderTraversal function to traverse through the tree
-     * @param {Node} Represents a Node
-     */
     postOrderTraversal: function(node) {
         if (node) {
             this.postOrderTraversal(node.left);
@@ -96,11 +69,6 @@ BinaryTree.prototype = {
             console.log(node.data);
         }
     },
-    /**
-     * searchValueinTree function to searchValueinTree
-     * @param {Node} node
-     * @param {Number} key
-     */
     searchValueinTree: function(node, key) {
         if (node === null) {
             return false;
@@ -112,10 +80,7 @@ BinaryTree.prototype = {
             return this.searchValueinTree(node.left, key);
         }
     },
-    /**
-     * minValueInTree function to FindMinimum in tree
-     * @param {Node} node - The Node Object
-     */
+    //minimum value in the node is last node in the left side
     minValueInTree: function(node) {
         if (node === null) {
             return 0;
@@ -124,11 +89,6 @@ BinaryTree.prototype = {
         }
         return node.data;
     },
-    /**
-     * deleteValueInTree function to delete value
-     * @param {Node} node - The Node Object
-     * @param {Number} value - The value to be deleted
-     */
     deleteValueInTree: function(node, value) {
         if (node === null) {
             return node;
@@ -155,10 +115,6 @@ BinaryTree.prototype = {
         }
         return node;
     },
-    /**
-     * Function for finding maximum value in the tree
-     * @param {Node} node - Represents a node Object Entire tree
-     */
     maxValueInTree: function(node) {
         if (node === null) {
             return 0;
@@ -168,9 +124,6 @@ BinaryTree.prototype = {
         return node.data;
     }
 }
-/**
-Creating instanceof BinaryTree
-*/
 var bt = new BinaryTree();
 bt.insert(40);
 bt.insert(20);
@@ -179,10 +132,6 @@ bt.insert(30);
 bt.insert(60);
 bt.insert(50);
 bt.insert(70);
-bt.insert(45);
-bt.insert(15);
-bt.insert(18);
-bt.insert(12);
 //inorderTraversal(bt.root);
 console.log(bt.root);
 console.log("inOrder Traversal");
@@ -202,10 +151,13 @@ console.log(max);
 console.log("searching in the tree");
 var found = bt.searchValueinTree(bt.root, 100);
 console.log(found);
-var node1 = bt.deleteValueInTree(bt.root, 10);
+var node1 = bt.deleteValueInTree(bt.root, 20);
+console.log(node1.data + "replaced");
 console.log("inOrder Traversal");
 bt.inorderTraversal(node1);
 console.log("post order traversal");
 bt.postOrderTraversal(node1);
 console.log("pre Order traversal");
 bt.preOrderTraversal(node1);
+console.log(bt.root.data + " root");
+console.log(bt.root.left.data + "root right");

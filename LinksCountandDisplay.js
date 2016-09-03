@@ -1,10 +1,18 @@
 /**
+* FileName:LinksCountandDisplay.js
+* CreatedBy: Vamsee
+* Date :27-08-2016
+* Purpose : Function to count links in a document
+*/
+
+/**
 *Function to count links in document
 */
 function countLinks() {
     var x = document.links.length;
     document.getElementById('count').innerHTML = x;
 }
+
 /**
 * Function to display the links present in the Document
 */

@@ -1,7 +1,13 @@
 /**
+* FileName:Currying.js
+* CreatedBy: Vamsee
+* Date :27-08-2016
+* Purpose : Function to prepix "BridgeLabz" before anything we log
+*/
+/**
 * add function by using closure and currying
 * @param {Number} a
-*This function will return a new function
+* *This function will return a new function
 */
 var add = function(a) {
     return function(b) {
@@ -36,7 +42,7 @@ var division = function(a) {
         return a / b;
     }
 }
-//calling the returned function
+/*calling the returned functions and logging to console*/
 var addTo = add(5);
 console.log(addTo(4));
 var substractTo = substract(3);

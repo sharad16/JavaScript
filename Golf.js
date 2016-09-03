@@ -1,5 +1,12 @@
 /**
-* Function which well return a nick name based on Strokes and par
+* FileName:Golf.js
+* CreatedBy: Vamsee
+* Date :27-08-2016
+* Purpose :Function which will return a nick name based on Strokes and par
+*/
+
+/**
+* Function which will return a nick name based on Strokes and par
 * @param {Number} strokes - No of Strokes to reach the hole
 * @param {Number} par - the number of strokes a first-class player should normally require for a particular hole or course.
 * @return {String} nickName
@@ -21,5 +28,7 @@ function golfNickName(strokes, par) {
         return "Go Home";
     }
 }
+
+/*Calling the method golfNickName*/
 var result = golfNickName(6, 3);
 console.log(result);
