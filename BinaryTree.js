@@ -1,7 +1,7 @@
 /**
 * FileName:BinaryTree.js
-* CreatedBy: Vamsee
-* Date :27-08-2016
+* CreatedBy: sharad
+* Date :11-10-2016
 * Purpose : Creating BinaryTree using JS prototype
 */
 

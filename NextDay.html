@@ -1,0 +1,19 @@
+<!--@Author : sharad
+    @Date : o8 Octo 2016
+	@Purpose: program of extending the date instance using method to return next day -->
+<!DOCTYPE html>
+<html>
+    <body bgcolor="#59f442">
+	<button type = button onclick = "currentYear()">Next Day</button>
+		<script>
+			function currentYear() {
+			var today = new Date();
+			var day = today.getDate() + 1;
+			var month = today.getMonth() + 1;
+			var year = today.getFullYear();
+			document.write("Next day is= "+day+ "/" +month+ "/" +year);
+		}
+
+		</script>
+    </body>
+</html>
