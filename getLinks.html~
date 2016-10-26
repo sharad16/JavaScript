@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+  <title>prefix word</title>
+</head>
+<body>
+   <a href="google.com">google</a><br>
+  <a href="gmail.com">gmail</a>
+</p>
+</p>
+<p id="demo">hello</p>
+  <script src ="/home/bridgeit/javascript/getLinks.js">
+  </script>
+</body>
+</html

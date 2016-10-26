@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Arithmetic operations</title>
+</head>
+<script >
+function Addition()
+{
+x=parseFloat(calc.value1.value);
+y=parseFloat(calc.value2.value);
+z=(x+y);
+alert("The Addition result is"+z);
+calc.value3.value=z
+}
+function Subtraction()
+{
+var x,y,z;
+x=calc.value1.value;
+y=calc.value2.value;
+z=x-y;
+alert("The subtraction result is "+z);
+calc.value3.value=z
+}
+function Multiplication()
+{
+var x,y,z;
+x=calc.value1.value;
+y=calc.value2.value;
+z=x*y;
+alert("The Multiplication result is "+z);
+calc.value3.value=z
+}
+function Division()
+{
+var x,y,z;
+x=calc.value1.value;
+y=calc.value2.value;
+z=x/y;
+alert("The subtraction result is "+z);
+calc.value3.value=z
+}
+</script>
+</head>
+<body>
+<form name="calc">
+<h1>Arithmatic Operetions</h1>
+Enter first Numeric Value :   <input type="number" id="value1"> </br>
+Enter Second Numeric Value : <input type="number" id="value2"> </br>
+ </br>
+Result of the Arithmetic operation is : <output type="number" id="value3"> </output></br>
+<input type="button" Value="Addition" onClick=Addition()> </br>
+<input type="button" Value="Subtraction" onClick=Subtraction()></br>
+<input type="button" Value="Multiplication" onClick=Multiplication()></br>
+<input type="button" Value="Division" onClick=Division()></br>
+</form>
+</body>
+</html>

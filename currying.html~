@@ -1,0 +1,10 @@
+<!-- @Author: sharad
+     @Date : 10 0cto 2016
+     @Purpose : Program of calculating Arithmetic operation using curring method-->
+<!DOCTYPE html>
+<html>
+	<body>
+		<script src="/home/bridgeit/ReadyHtml/currying.js">
+		</script>
+	</body>
+</html>	
