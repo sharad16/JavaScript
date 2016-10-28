@@ -1,0 +1,33 @@
+**
+* FileName:VehicleObject.js
+* CreatedBy: sharad
+* Date :27-10-2016
+* Purpose :Defining Vehicle Object and setting property dynamicaly using concept of prototype
+*/
+<!DOCTYPE html>
+<html>
+<body bgcolor="cyan">
+<p id="demo"></p>
+<script>
+function vehicle(MaxSpeed, type, displacement,modelno) {
+    this.MaxSpeed= MaxSpeed;
+    this.type = type;
+    this.displacement = displacement;
+    this.modelno = modelno;
+}
+var max=prompt("Enter max Speed of bike");
+var dis=prompt("Enter distance per hours of bike");
+var type=prompt("Enter type of bike");
+var model=prompt("Enter model of bike");
+var price=prompt("Enter price of Bike");
+vehicle.prototype.price=price;
+ vehicle(max,dis, type,model);
+
+document.getElementById("demo").innerHTML =
+"MaxSpeed = :" + this.MaxSpeed + "<br>"+ "Type =:" + this.type +"<br>"+ "Displacement =:" + this.displacement
++"<br>"+"model no =:"+
+this.modelno +"<br>"+"Bike price = :"+ this.price;
+</script>
+
+</body>
+</html>
